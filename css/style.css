@@ -128,3 +128,9 @@ html {
     color: white;
     background-color: black;
 }
+
+.section__image {
+    width: 570px;
+    height: auto;
+    margin: 10px;
+}

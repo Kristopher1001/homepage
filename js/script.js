@@ -1,24 +1,36 @@
-console.log("Cześć!");
+{
+    const welcome = () => {
+        console.log("Cześć!")
+    };
 
-let przyciskElement = document.querySelector(".button");
-let zdjecieElement = document.querySelector(".picture");
+    welcome();
 
-przyciskElement.addEventListener("click", () => {
-    zdjecieElement.remove();
-})
-
-
-let button = document.querySelector(".buttonBackground");
-let body = document.querySelector(".body");
-let themeName = document.querySelector(".themeName")
-
-button.addEventListener("click", () => {
-    body.classList.toggle("dark");
+    const removePicture = () => {
+        const pictureElement = document.querySelector(".section__picture");
+        pictureElement.remove();
+    };
 
 
-    if (body.classList.contains("dark")) {
-        themeName.innerText = "jasne";
-    } else {
-        themeName.innerText = "ciemne";
+    const removeElementClickInit = () => {
+        const buttonElement = document.querySelector(".button");
+        buttonElement.addEventListener("click", removePicture)
+    };
+
+    const toggleBackground = () => {
+        const body = document.querySelector(".body");
+        const themeName = document.querySelector(".themeName");
+
+        body.classList.toggle("dark");
+        themeName.innerText = body.classList.contains("dark") ? "jasne" : "ciemne";
+    };
+
+    const changeBackgroundButtonInit = () => {
+        const changeBackgroundButton = document.querySelector(".backgroundButton");
+        changeBackgroundButton.addEventListener("click", toggleBackground);
+
+        
     }
-});
+
+    changeBackgroundButtonInit();
+    removeElementClickInit();
+}

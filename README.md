@@ -18,7 +18,6 @@ In creating it, I used several programming technologies, and these are:
 -BEM convention<br>
 -Normalize<br>
 -ES6+ feature
-
-In addition, I used the BEM convention, Normalize.css or OpenGraph. 
+ 
 Inside, I have inserted a table that describes my competences in the context of project management. 
 I also used https://fonts.google.com/, from where I downloaded the Berkshire Swash font.
